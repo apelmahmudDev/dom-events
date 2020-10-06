@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+    <style>
+        article{
+            border: 2px solid tomato;
+            border-radius: 20px;
+            padding: 10px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>   
+            <!-- most important article -->
+           <article id="first-article">
+               <h3>title-1</h3>
+               <p title="I am the most important author" id="bestSeller" class="author">author-1</p>
+               <p class="description-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi accusantium earum enim, assumenda voluptate corporis nulla architecto sit perspiciatis quam voluptas veniam non, corrupti unde, laborum maxime cum error totam!</p>
+           </article>
+           <article class="special">
+               <h3>title-2</h3>
+               <p class="author">author-2</p>
+               <p class="description-2">Possimus quasi repellat ipsum repellendus quas quaerat ducimus aliquid in placeat quisquam, laboriosam, doloremque enim. Explicabo sunt, sit consequatur corporis commodi odit labore delectus! Atque nostrum eligendi aliquid quis in.</p>
+           </article>
+           <article class="special">
+               <h3>title-3</h3>
+               <p class="author">author-3</p>
+               <p class="descriptio-3">Fuga perspiciatis unde, at error suscipit amet voluptatem totam magni. Nemo nobis magnam ipsam minus error repellat, sed vitae fugiat ducimus molestias libero nam fuga, nihil cumque distinctio optio accusantium!</p>
+           </article>
+           <article>
+               <h2>Grocery list</h2>
+               <ul id="gift-list">
+                   <li>gift item-1</li>
+                   <li>gift item-2</li>
+                   <li>gift item-3</li>
+                   <li>gift item-4</li>
+                   <li>gift item-5</li>
+               </ul>
+           </article>
+        </section>
+    </main>
+
+    <script>
+        const article = document.getElementById('first-article');
+        const newPragraph = document.createElement('p');
+        newPragraph.innerHTML = 'Added by javascrpt';
+        article.appendChild(newPragraph);
+
+        // add one more item
+        const ul = document.getElementById('gift-list');
+        const li = document.createElement('li');
+        li.innerHTML = 'Brand new Item';
+        ul.appendChild(li);
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+    <style>
+        article{
+            border: 2px solid tomato;
+            border-radius: 20px;
+            padding: 10px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <!-- DIFFERENCE BETWEEN InnerHTML AND innertext -->
+            <p id="innerhtml"></p>
+            <p id="innertext">InnerText</>
+            <!--/ DIFFERENCE BETWEEN InnerHTML AND innertext -->
+
+           <article>
+               <h3>title-1</h3>
+               <p title="I am the most important author" id="bestSeller" class="author">author-1</p>
+               <p class="description-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi accusantium earum enim, assumenda voluptate corporis nulla architecto sit perspiciatis quam voluptas veniam non, corrupti unde, laborum maxime cum error totam!</p>
+           </article>
+           <article class="special">
+               <h3>title-2</h3>
+               <p class="author">author-2</p>
+               <p class="description-2">Possimus quasi repellat ipsum repellendus quas quaerat ducimus aliquid in placeat quisquam, laboriosam, doloremque enim. Explicabo sunt, sit consequatur corporis commodi odit labore delectus! Atque nostrum eligendi aliquid quis in.</p>
+           </article>
+           <article class="special">
+               <h3>title-3</h3>
+               <p class="author">author-3</p>
+               <p class="descriptio-3">Fuga perspiciatis unde, at error suscipit amet voluptatem totam magni. Nemo nobis magnam ipsam minus error repellat, sed vitae fugiat ducimus molestias libero nam fuga, nihil cumque distinctio optio accusantium!</p>
+           </article>
+        </section>
+    </main>
+
+    <script>
+        document.body.style.backgroundColor = 'tomato';
+
+        var name = 'My name is <b>Sabbir Hossain</b>';
+        var showInnerText = document.getElementById('innertext');
+        showInnerText.innerText = name; //return plan text
+
+        var showInnerHtml = document.getElementById('innerhtml');
+        showInnerHtml.innerHTML = name; //return full html content
+
+        var authors = document.querySelectorAll('.special h3');
+        for(var i = 0; i < authors.length; i++){
+            var element = authors[i];
+            element.innerHTML = 'Lekhok-'+ (i+1);
+            element.setAttribute('title','All author is same');
+            element.style.backgroundColor = 'lightblue';
+            // console.log(element);
+        }
+        
+    </script>
+</body>
+</html>
